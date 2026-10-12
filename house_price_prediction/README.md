@@ -53,15 +53,39 @@ house_price_prediction/
 └── README.md
 ```
 
-## Installation
+## Installation and Setup
 
-Install the required dependencies:
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-fork-repository-url>
+cd AI-ML/house_price_prediction
+```
+
+Replace `<your-fork-repository-url>` with your fork's GitHub URL.
+
+
+### 2. Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Run the Application
+### 3. Verify Model Files
+
+Ensure the following files are present in the `models/` directory:
+
+- `house_price_pipeline.pkl`
+- `model_metrics.json`
+
+### 4. Run Automated Tests
+
+```bash
+python -m pytest -v
+```
+
+## 5. Run the Application
 
 From the `house_price_prediction` project directory, run:
 
@@ -69,13 +93,13 @@ From the `house_price_prediction` project directory, run:
 python -m streamlit run src/predict.py
 ```
 
-## Run Tests
+### 6. Test the Prediction Workflow
 
-Execute the automated test suite:
+1. Enter the required property details.
+2. Submit the inputs to estimate the house price.
+3. Review the estimated price and any available prediction explanations.
+4. Change the inputs and verify that the prediction updates accordingly.
 
-```bash
-python -m pytest -v
-```
 
 ## Testing and Continuous Integration
 
